@@ -16,7 +16,7 @@ int main()
 	std::cin >> firstNumber;
 
 	if (firstNumber >= 1 && firstNumber < 10
-		&& secondNumber >= 1 && secondNumber <10)
+		&& secondNumber >= 1 && secondNumber < 10)
 	{
 		// Ask the user which operation they would like to perform
 		std::cout << "Select an operation to perform on the two numbers:\n";
@@ -55,8 +55,6 @@ int main()
 		// Print out the result of the division
 		std::cout << "\nThe result is: " << Result << "\n\n";
 	}
-
-	
 
 	return 0;
 }
