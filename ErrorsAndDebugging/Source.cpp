@@ -13,20 +13,25 @@ int main()
 	std::cin >> firstNumber;
 
 	std::cout << "\nEnter a second whole number (1-10): ";
-	std::cin >> firstNumber;
+	std::cin >> secondNumber;
 
-	if (firstNumber >= 1 && firstNumber < 10
-		&& secondNumber >= 1 && secondNumber < 10)
+	if (firstNumber >= 1 && firstNumber <= 10
+		&& secondNumber >= 1 && secondNumber <= 10)
 	{
 		// Ask the user which operation they would like to perform
 		std::cout << "Select an operation to perform on the two numbers:\n";
-		std::cout << "1. Addition\n";
-		std::cout << "2. Subtraction";
-		std::cout << "3. Multiplcation\n";
-		std::cout << "4. Division\n\n";
+		std::cout << "1. Addition" << std::endl;
+		std::cout << "2. Subtraction" << std::endl;
+		std::cout << "3. Multiplcation" << std::endl;
+		std::cout << "4. Division" << std::endl << std::endl;
 
 		std::cout << "User entered: ";
-		cin >> operationChoice;
+		std::cin >> operationChoice;
+
+		if (operationChoice < 1 || operationChoice > 4) {
+			std::cout << std::endl << "You must enter a choice between 1-4." << std::endl;
+			return 0;
+		}
 
 		// Perform the selected operation
 		switch (operationChoice)
@@ -34,6 +39,7 @@ int main()
 			case 1: // Addition
 			{
 				result = firstNumber + secondNumber;
+				break;
 			}
 			case 2: // Subtraction
 			{
@@ -53,7 +59,7 @@ int main()
 		}
 
 		// Print out the result of the division
-		std::cout << "\nThe result is: " << Result << "\n\n";
+		std::cout << "\nThe result is: " << result << "\n\n";
 	}
 
 	return 0;
