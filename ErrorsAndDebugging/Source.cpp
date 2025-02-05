@@ -59,7 +59,7 @@ int main()
 		}
 
 		// Print out the result of the division
-		std::cout << "\nThe result is: " << result << "\n\n";
+		std::cout << std::endl << "The result is: " << result << std::endl << std::endl;
 	}
 
 	return 0;
